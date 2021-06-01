@@ -9,6 +9,6 @@ Server without upload and one user
 TO DO:
 --------
 - [ ] login system 
-- [ ] create server for `main2.py` 
+- [ ] create server for `server2.py` 
 - [ ] global server ready ftp
 - [ ] upload to `server.py`
