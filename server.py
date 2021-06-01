@@ -5,28 +5,25 @@ from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
 def main():
-    # Instantiate a dummy authorizer for managing 'virtual' users
     authorizer = DummyAuthorizer()
 
-    # Define a new user having full r/w permissions and a read-only
-    # anonymous user
-    authorizer.add_user('user', '12345', '.', perm='elradfmwMT')
+    #user login
+    authorizer.add_user('root', 'admin123', '.', perm='elradfmwMT')
     authorizer.add_anonymous(os.getcwd())
 
-    # Instantiate FTP handler class
     handler = FTPHandler
     handler.authorizer = authorizer
 
-    # Define a customized banner (string returned when client connects)
+    #client login
     handler.banner = "pyftpdlib based ftpd ready"
     address = ('127.0.0.1', 2121)
     server = FTPServer(address, handler)
 
-    # set a limit for connections
+    #limit for connections
     server.max_cons = 256
     server.max_cons_per_ip = 5
 
-    # start ftp server
+    #start ftp server
     server.serve_forever()
 
 if __name__ == '__main__':
