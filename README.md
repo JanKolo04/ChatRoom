@@ -1,11 +1,14 @@
 # FTP-server
 FTP server on local host
 
-# Run working server
+# Run server
+
+Server without upload and one user 
 `python server.py`
 
 TO DO:
 --------
-- [ ] add login system 
+- [ ] login system 
 - [ ] create server for `main2.py` 
-- [ ] add on global server ready ftp
+- [ ] global server ready ftp
+- [ ] upload to `server.py`
