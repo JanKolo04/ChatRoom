@@ -2,6 +2,7 @@
 FTP server on local host
 
 TO DO:
--------------
-- add login system 
-- create server for 'main2'
+--------
+- [ ] add login system 
+- [ ] create server for `main2.py` 
+- [ ] add on global server ready ftp
