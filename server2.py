@@ -26,19 +26,6 @@ def handle(client):
                 else:
                     client.send('Command was refused!'.encode('ascii'))
 
-
-                    'in development'
-            #elif msg.decode('ascii').startswith('BAN'):
-                #if nicknames[clients.index(client)] == 'admin':
-                    #name_to_ban = msg.decode('ascii')[4:]
-                    #kick_user(name_to_ban)
-                    #with open('bans.txt', 'a') as f:
-                        #f.write(f'{name_to_ban}\n')
-                    #print(f'{name_to_ban} was banned!')
-                #else:
-                    #client.send('Command was refused!'.encode('ascii'))
-
-
             else:
                 broadcast(message)
         except:
@@ -87,18 +74,6 @@ def kick_user(name):
         client_to_kick.close()
         nicknames.remove(name)
         broadcast(f'{name} was kicked by admin'.encode('ascii'))
-
-'''
-def ban_user(name):
-    if name in nicknames:
-        name_index = nicknames.index(name)
-        client_to_ban = clients[name_index]
-        clients.remove(client_to_ban)
-        client_to_ban.send('You are banned by admin'.encode('ascii'))
-        client_to_ban.close()
-        nicknames.remove(name)
-        broadcast(f'{name} was banned by admin'.encode('ascii'))
-'''
 
 
 print("Server is listening...")
