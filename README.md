@@ -79,8 +79,6 @@ def write():
             if nickname == 'admin':
                 if message[len(nickname)+2:].startswith('/kick'):
                     client.send(f'KICK {message[len(nickname)+2+6:]}'.encode('ascii'))
-                elif message[len(nickname)+2:].startswith('/ban'):
-                    client.send(f'BAN {message[len(nickname)+2+5:]}'.encode('ascii'))
             else:
                 print("Commands can only executed by the admin")
         else:
