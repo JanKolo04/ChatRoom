@@ -98,5 +98,5 @@ If you write wrong password code is break
 
 # TO DO 
 
-- [ ] add on hosting 
+- [ ] add hosting
 - [ ] GUI tkinter
